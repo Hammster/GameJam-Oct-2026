@@ -33,11 +33,11 @@ func on_enter():
 	match state:
 		State.BURIED:
 			visible = false
-			position = grave.position
+			position = grave.position - Vector3.UP * HEIGHT
 			timer = randf_range(MIN_BURIED, MAX_BURIED)
 		State.EMERGING:
 			visible = true
-			position = grave.position
+			position = grave.position - Vector3.UP * HEIGHT
 			timer = EMERGING
 			anim.play("pick-up")
 		State.ROAMING:
