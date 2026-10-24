@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dxdl7kk4npxky"]
+
+[ext_resource type="PackedScene" uid="uid://cwi3lvpag1843" path="res://Assets/grave.fbx" id="1_w827d"]
+[ext_resource type="PackedScene" uid="uid://bggxyr20d2nu7" path="res://Assets/gravestone-debris.fbx" id="2_7ij81"]
+[ext_resource type="PackedScene" uid="uid://l4we1i0vv7hi" path="res://Assets/pumpkin.fbx" id="3_q8nwv"]
+[ext_resource type="PackedScene" uid="uid://bnd33bn2xb8dg" path="res://Assets/candle.fbx" id="4_e4eet"]
+
+[node name="Node3D" type="Node3D" unique_id=1225144578]
+
+[node name="grave" parent="." unique_id=1812864091 instance=ExtResource("1_w827d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.004455447, 0, 0.045716047)
+
+[node name="gravestone-debris" parent="." unique_id=2003518330 instance=ExtResource("2_7ij81")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.057322264, 0, -0.51453185)
+
+[node name="pumpkin" parent="." unique_id=1954182792 instance=ExtResource("3_q8nwv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2555803, 0, -0.22442222)
+
+[node name="candle" parent="." unique_id=2073826364 instance=ExtResource("4_e4eet")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.21115947, 0, 0.043516397)
