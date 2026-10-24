@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://xnc6rjabfgdv"]
+
+[ext_resource type="PackedScene" uid="uid://lvs5kceg2mfa" path="res://character-digger.fbx" id="1_aggc4"]
+
+[node name="GraveDigger" type="Node3D" unique_id=1669675991]
+
+[node name="character-digger" parent="." unique_id=1996278928 instance=ExtResource("1_aggc4")]
