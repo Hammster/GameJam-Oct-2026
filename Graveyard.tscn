@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://cykkfk7cjigk4"]
+
+[ext_resource type="PackedScene" uid="uid://b8yjy75iuxs21" path="res://Assets/floor.glb" id="1_b58pn"]
+[ext_resource type="PackedScene" uid="uid://bq42pi4d1jwis" path="res://Assets/pine.fbx" id="2_cv3il"]
+
+[node name="Graveyard" type="Node3D" unique_id=1040692397]
+
+[node name="AuxScene" parent="." unique_id=1932068332 instance=ExtResource("1_b58pn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.10541296, 0, -0.004836321)
+
+[node name="pine" parent="AuxScene" unique_id=1717421000 instance=ExtResource("2_cv3il")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.105413, 0, 0.004836321)
