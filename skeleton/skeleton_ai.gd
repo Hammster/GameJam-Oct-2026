@@ -7,7 +7,7 @@ const EMERGING := 5.0
 const HEIGHT := 0.74
 const JITTER := 0.1
 
-@export var grave := Vector3.ZERO
+@export var grave: Node3D
 
 @onready var anim := $AnimationPlayer
 
@@ -33,11 +33,11 @@ func on_enter():
 	match state:
 		State.BURIED:
 			visible = false
-			position = grave
+			position = grave.position
 			timer = randf_range(MIN_BURIED, MAX_BURIED)
 		State.EMERGING:
 			visible = true
-			position = grave
+			position = grave.position
 			timer = EMERGING
 			anim.play("pick-up")
 		State.ROAMING:
@@ -60,7 +60,7 @@ func _process(delta):
 			if timer < 0.0: set_state(State.EMERGING)
 		State.EMERGING:
 			var t: float = clamp(timer / EMERGING, 0.0, 1.0)
-			position = grave - Vector3.UP * HEIGHT * t
+			position = grave.position - Vector3.UP * HEIGHT * t
 			if timer < 0.0: set_state(State.ROAMING)
 		State.ROAMING:
 			position += dir * SPEED * delta

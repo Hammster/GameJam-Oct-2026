@@ -3,11 +3,12 @@
 [ext_resource type="PackedScene" uid="uid://cykkfk7cjigk4" path="res://Graveyard.tscn" id="1_wbfu4"]
 [ext_resource type="PackedScene" uid="uid://xnc6rjabfgdv" path="res://grave_digger.tscn" id="2_xkndl"]
 [ext_resource type="PackedScene" uid="uid://lvf50mttls0k" path="res://skeleton/skeleton.tscn" id="3_u44n3"]
+[ext_resource type="PackedScene" uid="uid://b8udc3oxnjtvj" path="res://skeleton/grave.tscn" id="4_sb48q"]
 
 [node name="Node3D" type="Node3D" unique_id=203443286]
 
-[node name="character-skeleton" parent="." unique_id=1530747088 instance=ExtResource("3_u44n3")]
-grave = Vector3(3, 0, 2)
+[node name="character-skeleton" parent="." unique_id=1530747088 node_paths=PackedStringArray("grave") instance=ExtResource("3_u44n3")]
+grave = NodePath("../grave")
 
 [node name="Graveyard" parent="." unique_id=1040692397 instance=ExtResource("1_wbfu4")]
 
@@ -20,3 +21,6 @@ fov = 67.5
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=250175458]
 transform = Transform3D(1, 0, 0, 0, 0.33007008, 0.94395643, 0, -0.94395643, 0.33007008, 0, 6.002473, 3.8943646)
+
+[node name="grave" parent="." unique_id=212240962 instance=ExtResource("4_sb48q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -2)
