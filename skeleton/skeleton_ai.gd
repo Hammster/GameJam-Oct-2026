@@ -9,6 +9,8 @@ const ALIGNMENT := 3.0
 const WANDER_PROB := 0.1
 
 @export var grave: Node3D
+# Overrides the random buried time when >= 0.
+var buried_time := -1.0
 
 @onready var anim: AnimationPlayer = $"character-skeleton/AnimationPlayer"
 @onready var navigation_agent: NavigationAgent3D = $NavigationAgent3D
@@ -45,7 +47,7 @@ func on_enter():
 		State.BURIED:
 			visible = false
 			global_position = grave.global_position - Vector3.UP * HEIGHT
-			timer = randf_range(MIN_BURIED, MAX_BURIED)
+			timer = buried_time if buried_time >= 0.0 else randf_range(MIN_BURIED, MAX_BURIED)
 		State.EMERGING:
 			visible = true
 			global_position = grave.global_position - Vector3.UP * HEIGHT

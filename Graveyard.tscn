@@ -9,6 +9,9 @@
 [ext_resource type="PackedScene" uid="uid://bn8rugd06m8ty" path="res://Grave_3.tscn" id="7_ytjh1"]
 [ext_resource type="PackedScene" uid="uid://d0jut4gwmdv82" path="res://Grave_4.tscn" id="8_nndg0"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_6d82q"]
+size = Vector3(15.47998, 1.9248047, 0.37402344)
+
 [node name="Graveyard" type="Node3D" unique_id=1040692397]
 
 [node name="AuxScene" parent="." unique_id=1932068332 instance=ExtResource("1_b58pn")]
@@ -82,3 +85,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.213564, -4.7683716e-07, 2
 
 [node name="Node3D4" parent="AuxScene" unique_id=569376212 instance=ExtResource("7_ytjh1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.105413, 0, -2.9951637)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="AuxScene" unique_id=179932955]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.8053145, -0.46240234, 7.916004)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="AuxScene/StaticBody3D" unique_id=2037362233]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.70958, 0, 0)
+shape = SubResource("BoxShape3D_6d82q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AuxScene/StaticBody3D" unique_id=2086477702]
+shape = SubResource("BoxShape3D_6d82q")
