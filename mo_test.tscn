@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bvn5knaokm71h"]
+
+[ext_resource type="PackedScene" uid="uid://xnc6rjabfgdv" path="res://grave_digger.tscn" id="1_hbc3g"]
+
+[node name="Mo-test" type="Node3D" unique_id=1269700500]
+
+[node name="GraveDigger" parent="." unique_id=1669675991 instance=ExtResource("1_hbc3g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.81792724, 0, 0.7463081)
