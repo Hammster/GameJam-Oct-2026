@@ -10,6 +10,7 @@ var spawned := false
 
 
 func _ready() -> void:
+	add_to_group("spawners")
 	var map := get_world_3d().navigation_map
 	# The navigation map is empty until the server has synced at least once.
 	while NavigationServer3D.map_get_iteration_id(map) == 0:

@@ -11,8 +11,6 @@
 [ext_resource type="Script" uid="uid://b0xnhihib01yw" path="res://radar.gd" id="7_radar"]
 [ext_resource type="AudioStream" uid="uid://cs0ef5jmyjns7" path="res://Assets/music/graveyard_loop.wav" id="8_2vekm"]
 [ext_resource type="Script" uid="uid://beqc2obe3ysxh" path="res://crypt_health.gd" id="8_crypt"]
-[ext_resource type="Script" uid="uid://b0xnhihib01yw" path="res://radar.gd" id="7_radar"]
-[ext_resource type="Script" uid="uid://beqc2obe3ysxh" path="res://crypt_health.gd" id="8_crypt"]
 [ext_resource type="Script" uid="uid://bxsxdmrmw7ouo" path="res://world_environment.gd" id="10_yx171"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_sb48q"]
@@ -219,7 +217,6 @@ navigation_mesh = SubResource("NavigationMesh_sb48q")
 [node name="MusicPlayer" type="AudioStreamPlayer" parent="." unique_id=712103095]
 stream = SubResource("AudioStreamInteractive_r0x5m")
 autoplay = true
-bus = &"Music"
 playback_type = 1
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1168738032]
