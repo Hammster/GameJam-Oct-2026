@@ -21,7 +21,7 @@ enum State {
 
 var state: State
 var timer := 0.0
-var direction := Vector3(0.0, 0.0, -1.0)
+var direction := Vector3(0.0, 0.0, 1.0)
 
 func _ready():
 	set_state(State.BURIED)

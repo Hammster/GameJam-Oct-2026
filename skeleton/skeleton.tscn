@@ -12,6 +12,7 @@ collision_layer = 4
 script = ExtResource("2_eh87f")
 
 [node name="character-skeleton" parent="." unique_id=286325279 instance=ExtResource("1_f33b7")]
+transform = Transform3D(-0.99999994, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -0.99999994, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=848738643]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.37865093, 0)
