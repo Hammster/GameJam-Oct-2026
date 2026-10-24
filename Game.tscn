@@ -21,7 +21,7 @@ skeleton_scene = ExtResource("3_u44n3")
 grave_scene = ExtResource("4_sb48q")
 
 [node name="GraveDigger" parent="." unique_id=1669675991 instance=ExtResource("2_xkndl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.079928994, 0, -0.051651955)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.079928994, 2, -0.051651955)
 
 [node name="Camera3D2" type="Camera3D" parent="." unique_id=787899253]
 transform = Transform3D(1, 0, 0, 0, 0.63789445, 0.77012384, 0, -0.77012384, 0.63789445, -0.38107145, 11.70659, 11.252694)

@@ -1,4 +1,4 @@
-extends Node3D
+extends CharacterBody3D
 
 const SPEED := 3.0
 # Physics layers: 2 = PlayerAttack, 3 = skeletons.
@@ -25,7 +25,13 @@ func _ready() -> void:
 
 
 func _physics_process(delta: float) -> void:
+	var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
+	velocity.y = 0.0 if is_on_floor() else velocity.y - gravity * delta
+
 	if attacking:
+		velocity.x = 0.0
+		velocity.z = 0.0
+		move_and_slide()
 		return
 	if Input.is_action_just_pressed("attack"):
 		attack()
@@ -34,15 +40,20 @@ func _physics_process(delta: float) -> void:
 	var dir := Vector3(input.x, 0.0, input.y)
 	if dir != Vector3.ZERO:
 		dir = dir.normalized()
-		character.position += dir * SPEED * delta
+		velocity.x = dir.x * SPEED
+		velocity.z = dir.z * SPEED
 		character.rotation.y = lerp_angle(character.rotation.y, atan2(dir.x, dir.z), 0.2)
 		if anim.current_animation != "walk":
 			anim.play("walk")
-	elif anim.has_animation("idle"):
-		if anim.current_animation != "idle":
-			anim.play("idle")
 	else:
-		anim.stop()
+		velocity.x = 0.0
+		velocity.z = 0.0
+		if anim.has_animation("idle"):
+			if anim.current_animation != "idle":
+				anim.play("idle")
+		else:
+			anim.stop()
+	move_and_slide()
 
 
 func attack() -> void:
