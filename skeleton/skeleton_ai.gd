@@ -57,9 +57,11 @@ func on_enter():
 			choose_random_target()
 			pass
 		State.DEATH:
-			visible = false
+			$CollisionShape3D.set_deferred("disabled", true)
+			anim.get_animation("die").loop_mode = Animation.LOOP_NONE
 			anim.play("die")
-			pass
+			await anim.animation_finished
+			queue_free()
 
 func _process(delta: float):
 	timer -= delta
