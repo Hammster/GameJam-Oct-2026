@@ -15,10 +15,22 @@
 [ext_resource type="PackedScene" uid="uid://cj4gka2w226uv" path="res://Assets/trunk.fbx" id="13_os2k2"]
 [ext_resource type="PackedScene" uid="uid://bmfwuso3ke3ld" path="res://Assets/pine-crooked.fbx" id="14_6i5qi"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_2wp6v"]
+size = Vector3(17.094467, 3.4093018, 2.7407227)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_os2k2"]
+size = Vector3(3.5128174, 5.6309814, 21.947754)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2nk42"]
+size = Vector3(39.1015, 3.9516602, 2.4106445)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_i2owx"]
+size = Vector3(17.573833, 3.3452148, 2.8546143)
+
 [node name="Graveyard" type="Node3D" unique_id=1040692397]
 
 [node name="AuxScene" parent="." unique_id=1932068332 instance=ExtResource("1_b58pn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.080107, 3.5678983, -10.195398)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.008, 0)
 
 [node name="iron-fence-curve" parent="AuxScene" unique_id=11159713 instance=ExtResource("4_nung2")]
 transform = Transform3D(0.026683815, 0, 0.9996439, 0, 1, 0, -0.9996439, 0, 0.026683815, -16.824112, 9.536743e-07, 7.5630245)
@@ -181,3 +193,25 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.048329, 0.002711773, -0.9
 
 [node name="pine-crooked2" parent="AuxScene" unique_id=2015992184 instance=ExtResource("14_6i5qi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.13155365, 0.49981737, -3.1506557)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=2125060616]
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D" unique_id=1123410825]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.498545, 1.5805144, 9.365425)
+shape = SubResource("BoxShape3D_2wp6v")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="StaticBody3D/CollisionShape3D3" unique_id=1617796769]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.583082, -1.137351, -10.410957)
+shape = SubResource("BoxShape3D_os2k2")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D/CollisionShape3D3" unique_id=1767903810]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.227137, 0.63580847, -9.050716)
+shape = SubResource("BoxShape3D_os2k2")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" unique_id=1265302128]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.75771236, 1.7266173, -9.20979)
+shape = SubResource("BoxShape3D_2nk42")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=861252100]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.832294, 1.6786423, 9.442641)
+shape = SubResource("BoxShape3D_i2owx")
