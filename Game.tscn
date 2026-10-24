@@ -41,10 +41,11 @@ grave_scene = ExtResource("4_sb48q")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.079928994, 2, -0.051651955)
 
 [node name="Camera3D2" type="Camera3D" parent="." unique_id=787899253 node_paths=PackedStringArray("target")]
-transform = Transform3D(1, 0, 0, 0, 0.63789445, 0.77012384, 0, -0.77012384, 0.63789445, -0.38107145, 11.70659, 11.252694)
+transform = Transform3D(1, 0, 0, 0, 0.97539026, 0.22048542, 0, -0.22048542, 0.97539026, -0.38107145, 2.9052582, 5.231078)
 fov = 67.5
 script = ExtResource("6_camfollow")
 target = NodePath("../GraveDigger")
+follow_amount = 0.93
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=250175458]
 transform = Transform3D(1, 0, 0, 0, 0.33007008, 0.94395643, 0, -0.94395643, 0.33007008, 0, 6.002473, 3.8943646)
