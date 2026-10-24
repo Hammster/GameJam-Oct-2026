@@ -391,7 +391,7 @@ shape = SubResource("BoxShape3D_2wp6v")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.75771236, 1.7266173, -9.20979)
 shape = SubResource("BoxShape3D_2nk42")
 
-[node name="CollisionShape3D6" type="CollisionShape3D" parent="StaticBody3D" unique_id=335207749]
+[node name="CollisionShapeSkelletonTarget" type="CollisionShape3D" parent="StaticBody3D" unique_id=335207749]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.88255477, 0.92393494, -1.0395694)
 shape = SubResource("BoxShape3D_p0c1n")
 

@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bdpyv3kxsqalh"]
+
+[ext_resource type="PackedScene" uid="uid://lvs5kceg2mfa" path="res://Assets/character-digger.fbx" id="1_21oh2"]
+[ext_resource type="PackedScene" uid="uid://cc2ouv614dqwp" path="res://Assets/shovel.fbx" id="2_hyrlv"]
+
+[node name="character-digger" unique_id=854178911 instance=ExtResource("1_21oh2")]
+
+[node name="shovel" parent="character_digger/root/torso/arm_right" parent_id_path=PackedInt32Array(1774812604) index="0" unique_id=1939224912 instance=ExtResource("2_hyrlv")]
+transform = Transform3D(0.772938, -0.6170781, -0.147585, 0.56642497, 0.7759111, -0.2777134, 0.2858837, 0.13105941, 0.94925964, -0.21803877, -0.04848191, 0.23887205)
