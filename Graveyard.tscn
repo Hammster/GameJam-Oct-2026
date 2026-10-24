@@ -207,6 +207,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.048329, 0.002711773, -0.9
 [node name="pine-crooked2" parent="AuxScene" unique_id=2015992184 instance=ExtResource("14_6i5qi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.13155365, 0.49981737, -3.1506557)
 
+[node name="crypt-door" parent="AuxScene" unique_id=224218299 instance=ExtResource("15_6i5qi")]
+transform = Transform3D(0.017174428, 0, -0.99985254, 0, 1, 0, 0.99985254, 0, 0.017174428, -17.141666, 0.06456615, 1.7495136)
+
+[node name="crypt-door2" parent="AuxScene" unique_id=260360350 instance=ExtResource("15_6i5qi")]
+transform = Transform3D(0.017174428, 0, -0.99985254, 0, 1, 0, 0.99985254, 0, 0.017174428, -17.141666, 0.06456615, 2.1648216)
+
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=2125060616]
 
 [node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D" unique_id=1123410825]
@@ -228,10 +234,3 @@ shape = SubResource("BoxShape3D_2nk42")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=861252100]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.832294, 1.6786423, 9.442641)
 shape = SubResource("BoxShape3D_i2owx")
-[node name="crypt-door" parent="AuxScene" unique_id=224218299 instance=ExtResource("15_6i5qi")]
-transform = Transform3D(0.017174428, 0, -0.99985254, 0, 1, 0, 0.99985254, 0, 0.017174428, -17.817091, 0.6670575, 1.7495136)
-metadata/_edit_group_ = true
-
-[node name="crypt-door2" parent="AuxScene" unique_id=260360350 instance=ExtResource("15_6i5qi")]
-transform = Transform3D(0.017174428, 0, -0.99985254, 0, 1, 0, 0.99985254, 0, 0.017174428, -17.817091, 0.6670575, 2.1648216)
-metadata/_edit_group_ = true
