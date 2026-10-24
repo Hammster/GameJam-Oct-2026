@@ -6,6 +6,7 @@ const MAX_BURIED := 6.0
 const EMERGING := 5.0
 const HEIGHT := 0.74
 const ALIGNMENT := 3.0
+const WANDER_PROB := 0.1
 
 @export var grave: Node3D
 
@@ -16,6 +17,7 @@ enum State {
 	BURIED,
 	EMERGING,
 	ROAMING,
+	LEAVING,
 	DEATH,
 }
 
@@ -88,12 +90,13 @@ func choose_random_target():
 		return
 
 	var target := NavigationServer3D.map_get_random_point(map, navigation_agent.navigation_layers, true)
-
 	navigation_agent.set_target_position(target)
 
 func move(delta: float):
-	if navigation_agent.is_navigation_finished():
-		choose_random_target()
+	if state == State.ROAMING:
+		var chance := 1.0 - pow(1.0 - WANDER_PROB, delta)
+		if navigation_agent.is_navigation_finished() or randf() < chance:
+			choose_random_target()
 		return
 
 	var next := navigation_agent.get_next_path_position()
