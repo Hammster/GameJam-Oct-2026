@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://lvf50mttls0k"]
+
+[ext_resource type="PackedScene" uid="uid://dw6l5lih83msg" path="res://skeleton/character-skeleton.fbx" id="1_f33b7"]
+[ext_resource type="Script" uid="uid://c5cwepgs54hr1" path="res://skeleton/skeleton_ai.gd" id="2_eh87f"]
+
+[node name="character-skeleton" unique_id=1530747088 instance=ExtResource("1_f33b7")]
+script = ExtResource("2_eh87f")
+
+[node name="arm_left" parent="character_skeleton/root/torso" parent_id_path=PackedInt32Array(1093177671) index="0" unique_id=1767811317]
+transform = Transform3D(0.7071067, 0.7071068, 0, -0.7071068, 0.7071067, 0, 0, 0, 1, 0.15, 0.225, 0.0025)
+
+[node name="arm_right" parent="character_skeleton/root/torso" parent_id_path=PackedInt32Array(1093177671) index="1" unique_id=1707454693]
+transform = Transform3D(0.70710677, -0.70710677, 0, 0.70710677, 0.70710677, 0, 0, 0, 1, -0.15, 0.225, 0.0025)
