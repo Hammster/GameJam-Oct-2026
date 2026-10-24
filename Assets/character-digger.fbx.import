@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://lvs5kceg2mfa"
-path="res://.godot/imported/character-digger.fbx-7c761fbbc494a9935cc5ecbf1d4efb4f.scn"
+path="res://.godot/imported/character-digger.fbx-960af3aab6968f2c408a776a30f0edf8.scn"
 
 [deps]
 
-source_file="res://character-digger.fbx"
-dest_files=["res://.godot/imported/character-digger.fbx-7c761fbbc494a9935cc5ecbf1d4efb4f.scn"]
+source_file="res://Assets/character-digger.fbx"
+dest_files=["res://.godot/imported/character-digger.fbx-960af3aab6968f2c408a776a30f0edf8.scn"]
 
 [params]
 

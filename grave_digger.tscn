@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://xnc6rjabfgdv"]
 
-[ext_resource type="PackedScene" uid="uid://lvs5kceg2mfa" path="res://character-digger.fbx" id="1_aggc4"]
+[ext_resource type="PackedScene" uid="uid://lvs5kceg2mfa" path="res://Assets/character-digger.fbx" id="1_aggc4"]
 [ext_resource type="Script" uid="uid://o1yhcojmyw5t" path="res://grave_digger.gd" id="2_script"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_6d82q"]
