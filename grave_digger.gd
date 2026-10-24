@@ -14,6 +14,7 @@ var attacking := false
 
 
 func _ready() -> void:
+	add_to_group("player")
 	if not InputMap.has_action("attack"):
 		InputMap.add_action("attack")
 		var ev := InputEventKey.new()
