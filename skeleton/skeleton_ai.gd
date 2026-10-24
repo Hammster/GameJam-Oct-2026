@@ -5,7 +5,7 @@ const MIN_BURIED := 3.0
 const MAX_BURIED := 6.0
 const EMERGING := 5.0
 const HEIGHT := 0.74
-const ALIGNMENT := 0.99
+const ALIGNMENT := 3.0
 
 @export var grave: Node3D
 
