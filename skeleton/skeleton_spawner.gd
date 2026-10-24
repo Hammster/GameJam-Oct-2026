@@ -6,11 +6,17 @@ extends Node3D
 @export var max_emerge_delay := 30.0
 
 
+var spawned := false
+
+
 func _ready() -> void:
 	var map := get_world_3d().navigation_map
 	# The navigation map is empty until the server has synced at least once.
 	while NavigationServer3D.map_get_iteration_id(map) == 0:
 		await get_tree().physics_frame
+	if spawned:
+		return
+	spawned = true
 	spawn_skeleton(map)
 
 

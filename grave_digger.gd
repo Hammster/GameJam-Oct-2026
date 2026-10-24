@@ -4,8 +4,8 @@ const SPEED := 3.0
 # Physics layers: 2 = PlayerAttack, 3 = skeletons.
 const ATTACK_LAYER := 1 << 1
 const ENEMY_LAYER := 1 << 2
-const HITBOX_SIZE := Vector3(0.8, 0.8, 0.8)
-const HITBOX_OFFSET := Vector3(0, 0.4, 0.5) # +Z is the character's forward.
+const HITBOX_SIZE := Vector3(1.6, 1.2, 1.6)
+const HITBOX_OFFSET := Vector3(0, 0.5, 0.9) # +Z is the character's forward.
 
 var attacking := false
 
