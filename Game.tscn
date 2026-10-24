@@ -2,8 +2,12 @@
 
 [ext_resource type="PackedScene" uid="uid://cykkfk7cjigk4" path="res://Graveyard.tscn" id="1_wbfu4"]
 [ext_resource type="PackedScene" uid="uid://xnc6rjabfgdv" path="res://grave_digger.tscn" id="2_xkndl"]
+[ext_resource type="PackedScene" uid="uid://lvf50mttls0k" path="res://skeleton/skeleton.tscn" id="3_u44n3"]
 
 [node name="Node3D" type="Node3D" unique_id=203443286]
+
+[node name="character-skeleton" parent="." unique_id=1530747088 instance=ExtResource("3_u44n3")]
+grave = Vector3(3, 0, 2)
 
 [node name="Graveyard" parent="." unique_id=1040692397 instance=ExtResource("1_wbfu4")]
 

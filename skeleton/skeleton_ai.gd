@@ -1,10 +1,10 @@
 extends Node3D
 
-const SPEED := 3.0
+const SPEED := 1.0
 const MIN_BURIED := 3.0
 const MAX_BURIED := 6.0
 const EMERGING := 5.0
-const HEIGHT := 1.0
+const HEIGHT := 0.74
 const JITTER := 0.1
 
 @export var grave := Vector3.ZERO
@@ -20,7 +20,7 @@ enum State {
 
 var state: State
 var timer := 0.0
-var facing := Vector2.from_angle(0)
+var facing := Vector2(0.0, 1.0)
 
 func _ready():
 	set_state(State.BURIED)
@@ -51,6 +51,9 @@ func on_enter():
 
 func _process(delta):
 	timer -= delta
+
+	var dir := Vector3(facing.x, 0.0, facing.y)
+	look_at(global_position - dir, Vector3.UP)
 	
 	match state:
 		State.BURIED:
@@ -60,9 +63,7 @@ func _process(delta):
 			position = grave - Vector3.UP * HEIGHT * t
 			if timer < 0.0: set_state(State.ROAMING)
 		State.ROAMING:
+			position += dir * SPEED * delta
 			var t: float = pow(JITTER, delta)
 			facing = lerp(Vector2.from_angle(randf() * TAU), facing, t)
 			facing = facing.normalized()
-			var dir := Vector3(facing.x, 0.0, facing.y)
-			look_at(global_position + dir, Vector3.UP)
-			position += dir * SPEED * delta
