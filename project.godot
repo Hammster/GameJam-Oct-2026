@@ -61,3 +61,4 @@ attack={
 [rendering]
 
 rendering_device/driver.windows="d3d12"
+environment/defaults/default_clear_color=Color(0.2, 0.22352941, 0.25490198, 1)

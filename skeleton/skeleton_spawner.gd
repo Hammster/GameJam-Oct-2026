@@ -1,28 +1,32 @@
 extends Node3D
 
-const GRAVES_PER_LEVEL := 3
-
-@export_range(1, 10) var level := 1
 @export var skeleton_scene: PackedScene
 @export var grave_scene: PackedScene
-@export var area_size := Vector2(16.0, 12.0)
-# Skeletons start emerging at a random time within this many seconds.
+# Skeleton starts emerging at a random time within this many seconds.
 @export var max_emerge_delay := 30.0
 
 
+var spawned := false
+
+
 func _ready() -> void:
-	for i in level * GRAVES_PER_LEVEL:
-		spawn_skeleton()
+	add_to_group("spawners")
+	var map := get_world_3d().navigation_map
+	# The navigation map is empty until the server has synced at least once.
+	while NavigationServer3D.map_get_iteration_id(map) == 0:
+		await get_tree().physics_frame
+	if spawned:
+		return
+	spawned = true
+	spawn_skeleton(map)
 
 
-func spawn_skeleton() -> void:
+func spawn_skeleton(map: RID) -> void:
 	var grave: Node3D = grave_scene.instantiate()
-	grave.position = Vector3(
-		randf_range(-area_size.x, area_size.x) * 0.5,
-		0.0,
-		randf_range(-area_size.y, area_size.y) * 0.5
-	)
 	add_child(grave)
+	# Keep the spawner's x/z, only take the height from the navmesh.
+	var ground := NavigationServer3D.map_get_closest_point(map, global_position)
+	grave.global_position = Vector3(global_position.x, ground.y, global_position.z)
 
 	var skeleton: Node3D = skeleton_scene.instantiate()
 	skeleton.grave = grave # Must be set before entering the tree; skeleton reads it in _ready.

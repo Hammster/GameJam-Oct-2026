@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://xnc6rjabfgdv"]
 
-[ext_resource type="PackedScene" uid="uid://lvs5kceg2mfa" path="res://Assets/character-digger.fbx" id="1_aggc4"]
 [ext_resource type="Script" uid="uid://o1yhcojmyw5t" path="res://grave_digger.gd" id="2_script"]
+[ext_resource type="PackedScene" uid="uid://bdpyv3kxsqalh" path="res://character_digger.tscn" id="2_tw5v7"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_6d82q"]
 radius = 0.2109375
@@ -10,7 +10,7 @@ height = 0.8511963
 [node name="GraveDigger" type="CharacterBody3D" unique_id=1669675991]
 script = ExtResource("2_script")
 
-[node name="character-digger" parent="." unique_id=1996278928 instance=ExtResource("1_aggc4")]
+[node name="character-digger" parent="." unique_id=854178911 instance=ExtResource("2_tw5v7")]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=896515407]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4335327, 0)

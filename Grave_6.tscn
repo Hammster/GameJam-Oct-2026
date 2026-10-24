@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bh4firrnq608o"]
+
+[ext_resource type="PackedScene" uid="uid://cwi3lvpag1843" path="res://Assets/grave.fbx" id="1_xsf7b"]
+[ext_resource type="PackedScene" uid="uid://cebucx4fsr20" path="res://Assets/gravestone-broken.fbx" id="2_4sgc8"]
+[ext_resource type="PackedScene" uid="uid://b41mqxpxq3huw" path="res://Assets/debris.fbx" id="3_ss0fy"]
+
+[node name="Node3D" type="Node3D" unique_id=867605271]
+
+[node name="grave" parent="." unique_id=1812864091 instance=ExtResource("1_xsf7b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.021272898, 0, 0.0576427)
+
+[node name="gravestone-broken" parent="." unique_id=436999542 instance=ExtResource("2_4sgc8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0044351816, 0, -0.59985757)
+
+[node name="debris" parent="." unique_id=941905209 instance=ExtResource("3_ss0fy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4689814, 0, -0.16599989)
