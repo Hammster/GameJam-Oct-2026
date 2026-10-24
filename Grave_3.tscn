@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bn8rugd06m8ty"]
+
+[ext_resource type="PackedScene" uid="uid://cwi3lvpag1843" path="res://Assets/grave.fbx" id="1_h7b53"]
+[ext_resource type="PackedScene" uid="uid://c8s8g6ou0j87t" path="res://Assets/gravestone-decorative.fbx" id="2_wdxgb"]
+[ext_resource type="PackedScene" uid="uid://dwx6yjpig8nw7" path="res://Assets/shovel-dirt.fbx" id="3_wvocu"]
+[ext_resource type="PackedScene" uid="uid://rryqhlrrrrbt" path="res://Assets/lantern-candle.fbx" id="4_ybajp"]
+
+[node name="Node3D" type="Node3D" unique_id=1072423849]
+
+[node name="grave" parent="." unique_id=1812864091 instance=ExtResource("1_h7b53")]
+
+[node name="gravestone-decorative" parent="." unique_id=420381316 instance=ExtResource("2_wdxgb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.036914587, 0, -0.62662196)
+
+[node name="shovel-dirt" parent="." unique_id=1383929653 instance=ExtResource("3_wvocu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3464911, 0, 0.41750526)
+
+[node name="lantern-candle" parent="." unique_id=2113614083 instance=ExtResource("4_ybajp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.24007452, 0, 0.13115358)

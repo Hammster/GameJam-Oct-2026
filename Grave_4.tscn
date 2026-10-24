@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://d0jut4gwmdv82"]
+
+[ext_resource type="PackedScene" uid="uid://dcphoxn84oud5" path="res://Assets/gravestone-flat.fbx" id="1_klmcb"]
+[ext_resource type="PackedScene" uid="uid://dbuntved3bfa8" path="res://Assets/candle-multiple.fbx" id="2_arhuh"]
+[ext_resource type="PackedScene" uid="uid://ucu0pm5m6h4m" path="res://Assets/pumpkin-tall-carved.fbx" id="3_26y61"]
+
+[node name="Node3D" type="Node3D" unique_id=2095993291]
+
+[node name="gravestone-flat" parent="." unique_id=1280018669 instance=ExtResource("1_klmcb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.032907963, 0, 0.12737226)
+
+[node name="candle-multiple" parent="." unique_id=103030732 instance=ExtResource("2_arhuh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.020085454, 1.1920929e-07, 0.75653744)
+
+[node name="pumpkin-tall-carved" parent="." unique_id=1884402989 instance=ExtResource("3_26y61")]
+transform = Transform3D(0.80508137, 0, 0.5931644, 0, 1, 0, -0.5931644, 0, 0.80508137, 0.4101019, 0, 0.33123708)

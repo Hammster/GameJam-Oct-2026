@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dlqi0dviy3xwv"]
+
+[ext_resource type="PackedScene" uid="uid://cwi3lvpag1843" path="res://Assets/grave.fbx" id="1_p2dmu"]
+[ext_resource type="PackedScene" uid="uid://btfd7eoy56ds5" path="res://Assets/gravestone-cross-large.fbx" id="2_20f24"]
+[ext_resource type="PackedScene" uid="uid://rryqhlrrrrbt" path="res://Assets/lantern-candle.fbx" id="3_sioyf"]
+
+[node name="Node3D" type="Node3D" unique_id=1454846586]
+
+[node name="grave" parent="." unique_id=1812864091 instance=ExtResource("1_p2dmu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.022935748, 0, 0.041983366)
+
+[node name="gravestone-cross-large" parent="." unique_id=993203211 instance=ExtResource("2_20f24")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.05709839, 0, -0.6180835)
+
+[node name="lantern-candle" parent="." unique_id=2113614083 instance=ExtResource("3_sioyf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.40032613, 0, -0.3067391)

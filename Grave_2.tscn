@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://c5wpoflsh06d6"]
+
+[ext_resource type="PackedScene" uid="uid://cwi3lvpag1843" path="res://Assets/grave.fbx" id="1_d6mpw"]
+[ext_resource type="PackedScene" uid="uid://c8s8g6ou0j87t" path="res://Assets/gravestone-decorative.fbx" id="2_cy45j"]
+[ext_resource type="PackedScene" uid="uid://b41mqxpxq3huw" path="res://Assets/debris.fbx" id="3_qhsr1"]
+[ext_resource type="PackedScene" uid="uid://c0vxumcmucoib" path="res://Assets/pumpkin-carved.fbx" id="4_10efb"]
+
+[node name="Node3D" type="Node3D" unique_id=1072423849]
+
+[node name="grave" parent="." unique_id=1812864091 instance=ExtResource("1_d6mpw")]
+
+[node name="gravestone-decorative" parent="." unique_id=420381316 instance=ExtResource("2_cy45j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.036914587, 0, -0.62662196)
+
+[node name="debris" parent="." unique_id=941905209 instance=ExtResource("3_qhsr1")]
+transform = Transform3D(0.96671015, 0, 0.2558739, 0, 1, 0, -0.2558739, 0, 0.96671015, -0.38490093, 0, 0.4433031)
+
+[node name="pumpkin-carved" parent="." unique_id=484113163 instance=ExtResource("4_10efb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.35652328, 0.18331599, 0.4082992)

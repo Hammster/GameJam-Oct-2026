@@ -1,12 +1,84 @@
 [gd_scene format=3 uid="uid://cykkfk7cjigk4"]
 
 [ext_resource type="PackedScene" uid="uid://b8yjy75iuxs21" path="res://Assets/floor.glb" id="1_b58pn"]
-[ext_resource type="PackedScene" uid="uid://bq42pi4d1jwis" path="res://Assets/pine.fbx" id="2_cv3il"]
+[ext_resource type="PackedScene" uid="uid://byue4ljnt2v2o" path="res://Assets/iron-fence-curve.fbx" id="4_nung2"]
+[ext_resource type="PackedScene" uid="uid://qgn2u7v4pbs0" path="res://Assets/iron-fence-border-column.fbx" id="5_172wu"]
+[ext_resource type="PackedScene" uid="uid://cp21lx2y12hrb" path="res://Assets/iron-fence.fbx" id="5_t00lh"]
+[ext_resource type="PackedScene" uid="uid://demi8ycgyw4kd" path="res://Assets/iron-fence-damaged.fbx" id="6_8ieq5"]
+[ext_resource type="PackedScene" uid="uid://dlqi0dviy3xwv" path="res://Grave_1.tscn" id="6_cjae6"]
+[ext_resource type="PackedScene" uid="uid://bn8rugd06m8ty" path="res://Grave_3.tscn" id="7_ytjh1"]
+[ext_resource type="PackedScene" uid="uid://d0jut4gwmdv82" path="res://Grave_4.tscn" id="8_nndg0"]
 
 [node name="Graveyard" type="Node3D" unique_id=1040692397]
 
 [node name="AuxScene" parent="." unique_id=1932068332 instance=ExtResource("1_b58pn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.10541296, 0, -0.004836321)
 
-[node name="pine" parent="AuxScene" unique_id=1717421000 instance=ExtResource("2_cv3il")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.105413, 0, 0.004836321)
+[node name="iron-fence-curve" parent="AuxScene" unique_id=11159713 instance=ExtResource("4_nung2")]
+transform = Transform3D(0.026683815, 0, 0.9996439, 0, 1, 0, -0.9996439, 0, 0.026683815, -17.28681, 9.536743e-07, 7.5630245)
+
+[node name="iron-fence" parent="AuxScene" unique_id=550066610 instance=ExtResource("5_t00lh")]
+transform = Transform3D(0.9961442, 0, -0.08773118, 0, 1, 0, 0.08773118, 0, 0.9961442, -16.301207, 0, 8.519047)
+
+[node name="iron-fence-damaged" parent="AuxScene" unique_id=1775029574 instance=ExtResource("6_8ieq5")]
+transform = Transform3D(0.99301714, 0, 0.11797087, 0, 1, 0, -0.11797087, 0, 0.99301714, -15.224886, 0, 8.507126)
+
+[node name="iron-fence-damaged3" parent="AuxScene" unique_id=1192912414 instance=ExtResource("6_8ieq5")]
+transform = Transform3D(0.04127577, 0, 0.9991478, 0, 1, 0, -0.9991478, 0, 0.04127577, -17.28591, 9.536743e-07, 5.5220766)
+
+[node name="iron-fence2" parent="AuxScene" unique_id=1838358865 instance=ExtResource("5_t00lh")]
+transform = Transform3D(0.995925, 0, -0.09018545, 0, 1, 0, 0.09018545, 0, 0.995925, -14.29361, -0.0837574, 8.460426)
+
+[node name="iron-fence4" parent="AuxScene" unique_id=1331057546 instance=ExtResource("5_t00lh")]
+transform = Transform3D(0.9998026, 0, 0.019869246, 0, 1, 0, -0.019869246, 0, 0.9998026, -13.246981, 0, 8.495374)
+
+[node name="iron-fence-damaged2" parent="AuxScene" unique_id=1516953464 instance=ExtResource("6_8ieq5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.232439, 0, 8.473812)
+
+[node name="iron-fence5" parent="AuxScene" unique_id=1711767608 instance=ExtResource("5_t00lh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.239384, -0.0837574, 8.460426)
+
+[node name="iron-fence6" parent="AuxScene" unique_id=1450163813 instance=ExtResource("5_t00lh")]
+transform = Transform3D(0.9976649, 0, -0.0682986, 0, 1, 0, 0.0682986, 0, 0.9976649, -10.212688, -0.0837574, 8.460426)
+
+[node name="iron-fence9" parent="AuxScene" unique_id=438179106 instance=ExtResource("5_t00lh")]
+transform = Transform3D(0.995925, 0, -0.09018545, 0, 1, 0, 0.09018545, 0, 0.995925, -9.276552, -0.0837574, 8.460426)
+
+[node name="iron-fence10" parent="AuxScene" unique_id=1682134535 instance=ExtResource("5_t00lh")]
+transform = Transform3D(0.9998026, 0, 0.019869246, 0, 1, 0, -0.019869246, 0, 0.9998026, -8.229923, 0, 8.495374)
+
+[node name="iron-fence-damaged4" parent="AuxScene" unique_id=1645610179 instance=ExtResource("6_8ieq5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.215382, 0, 8.473812)
+
+[node name="iron-fence11" parent="AuxScene" unique_id=327994981 instance=ExtResource("5_t00lh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.2223268, -0.0837574, 8.460426)
+
+[node name="iron-fence12" parent="AuxScene" unique_id=952361921 instance=ExtResource("5_t00lh")]
+transform = Transform3D(0.9976649, 0, -0.0682986, 0, 1, 0, 0.0682986, 0, 0.9976649, -5.1956315, -0.0837574, 8.460426)
+
+[node name="iron-fence3" parent="AuxScene" unique_id=1085703644 instance=ExtResource("5_t00lh")]
+transform = Transform3D(-0.03706719, 0, 0.99931276, 0, 1, 0, -0.99931276, 0, -0.03706719, -17.278208, 0, 6.524332)
+
+[node name="iron-fence7" parent="AuxScene" unique_id=1620776908 instance=ExtResource("5_t00lh")]
+transform = Transform3D(-0.03706719, 0, 0.99931276, 0, 1, 0, -0.99931276, 0, -0.03706719, -17.278208, 0, 4.4546814)
+
+[node name="iron-fence8" parent="AuxScene" unique_id=794090886 instance=ExtResource("5_t00lh")]
+transform = Transform3D(-0.03706719, 0, 0.99931276, 0, 1, 0, -0.99931276, 0, -0.03706719, -17.301905, 0, 3.46638)
+
+[node name="iron-fence-border-column" parent="AuxScene" unique_id=985004364 instance=ExtResource("5_172wu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6845341, 0, 8.428334)
+
+[node name="iron-fence-border-column2" parent="AuxScene" unique_id=1405853434 instance=ExtResource("5_172wu")]
+transform = Transform3D(-0.9999397, 0, -0.010985718, 0, 1, 0, 0.010985718, 0, -0.9999397, 2.5807831, 0, 7.5848637)
+
+[node name="Node3D" parent="AuxScene" unique_id=1454846586 instance=ExtResource("6_cjae6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.879444, -4.7683716e-07, 5.323988)
+
+[node name="Node3D2" parent="AuxScene" unique_id=1072423849 instance=ExtResource("7_ytjh1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.182373, 0, 5.3662252)
+
+[node name="Node3D3" parent="AuxScene" unique_id=2095993291 instance=ExtResource("8_nndg0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.213564, -4.7683716e-07, 2.9217274)
+
+[node name="Node3D4" parent="AuxScene" unique_id=569376212 instance=ExtResource("7_ytjh1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.105413, 0, -2.9951637)
