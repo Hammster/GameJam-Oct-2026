@@ -67,7 +67,7 @@ func _process(delta: float):
 	timer -= delta
 
 	if direction.length_squared() > 1e-3:
-		look_at(global_position + direction, Vector3.UP)
+		look_at(global_position - direction, Vector3.UP)
 	else:
 		push_warning("Direction should be normalized")
 	
@@ -118,3 +118,9 @@ func move(delta: float):
 func _on_velocity_computed(safe_velocity: Vector3):
 	velocity = safe_velocity
 	move_and_slide()
+	# Avoidance can steer away from `direction`; face the way we actually move.
+	var flat := Vector3(safe_velocity.x, 0.0, safe_velocity.z)
+	if flat.length_squared() > 0.01:
+		var blended := direction.lerp(flat.normalized(), 0.2)
+		if blended.length_squared() > 1e-3:
+			direction = blended.normalized()
