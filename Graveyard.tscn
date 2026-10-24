@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dlqi0dviy3xwv" path="res://Grave_1.tscn" id="6_cjae6"]
 [ext_resource type="PackedScene" uid="uid://bn8rugd06m8ty" path="res://Grave_3.tscn" id="7_ytjh1"]
 [ext_resource type="PackedScene" uid="uid://d0jut4gwmdv82" path="res://Grave_4.tscn" id="8_nndg0"]
+[ext_resource type="PackedScene" uid="uid://dk4e7so6x5u3t" path="res://Assets/lightpost-single.fbx" id="9_n5ojv"]
 [ext_resource type="PackedScene" uid="uid://c3tsqqhkbpe3x" path="res://Crypt.tscn" id="9_ytjh1"]
 [ext_resource type="PackedScene" uid="uid://b41jyplfk65uj" path="res://Grave_5.tscn" id="10_8ieq5"]
 [ext_resource type="PackedScene" uid="uid://yfmlkwsw0s0o" path="res://Assets/debris-wood.fbx" id="11_os2k2"]
@@ -31,10 +32,16 @@ size = Vector3(17.573833, 3.3452148, 2.8546143)
 [node name="Graveyard" type="Node3D" unique_id=1040692397]
 
 [node name="AuxScene" parent="." unique_id=1932068332 instance=ExtResource("1_b58pn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.008, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0061392784, 0, 0.0041184425)
 
 [node name="iron-fence-curve" parent="AuxScene" unique_id=11159713 instance=ExtResource("4_nung2")]
 transform = Transform3D(0.026683815, 0, 0.9996439, 0, 1, 0, -0.9996439, 0, 0.026683815, -16.824112, 9.536743e-07, 7.5630245)
+
+[node name="iron-fence-curve4" parent="AuxScene" unique_id=275352441 instance=ExtResource("4_nung2")]
+transform = Transform3D(-0.99985796, 0, -0.016853694, 0, 1, 0, 0.016853694, 0, -0.99985796, 17.985256, 9.536743e-07, 7.5630245)
+
+[node name="iron-fence-curve3" parent="AuxScene" unique_id=2121033716 instance=ExtResource("4_nung2")]
+transform = Transform3D(-0.027581995, 0, -0.99961954, 0, 1, 0, 0.99961954, 0, -0.027581995, 17.998798, 9.536743e-07, -7.603095)
 
 [node name="iron-fence-curve2" parent="AuxScene" unique_id=1556114361 instance=ExtResource("4_nung2")]
 transform = Transform3D(0.9998246, 0, 0.01872871, 0, 1, 0, -0.01872871, 0, 0.9998246, -16.80616, 9.536743e-07, -7.7060404)
@@ -84,20 +91,104 @@ transform = Transform3D(0.9998026, 0, 0.019869246, 0, 1, 0, -0.019869246, 0, 0.9
 [node name="iron-fence-damaged8" parent="AuxScene" unique_id=1633016071 instance=ExtResource("6_8ieq5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.873362, 0, -7.6910114)
 
+[node name="iron-fence-damaged10" parent="AuxScene" unique_id=2130446204 instance=ExtResource("6_8ieq5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9373846, 0.48393965, -7.6723537)
+
 [node name="iron-fence-damaged9" parent="AuxScene" unique_id=1233834773 instance=ExtResource("6_8ieq5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.93725, 0, -7.6910114)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.896127, 0, -7.6910114)
 
 [node name="iron-fence26" parent="AuxScene" unique_id=508647740 instance=ExtResource("5_t00lh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.890451, -0.0065512657, -7.6496143)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.890451, -0.0065512657, -7.6786976)
 
 [node name="iron-fence27" parent="AuxScene" unique_id=1894417904 instance=ExtResource("5_t00lh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.9021053, -0.0065512657, -7.6496143)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.9021053, -0.0065512657, -7.6786976)
 
 [node name="iron-fence28" parent="AuxScene" unique_id=1871521063 instance=ExtResource("5_t00lh")]
 transform = Transform3D(0.9997945, 0.020276887, 0, -0.020276887, 0.9997945, 0, 0, 0, 1, -5.9325166, 0.46447992, -7.6496143)
 
 [node name="iron-fence29" parent="AuxScene" unique_id=1798894081 instance=ExtResource("5_t00lh")]
 transform = Transform3D(0.9999226, 0.012446566, 0, -0.012446566, 0.9999226, 0, 0, 0, 1, -4.9188523, 0.4605224, -7.6496143)
+
+[node name="iron-fence30" parent="AuxScene" unique_id=357200354 instance=ExtResource("5_t00lh")]
+transform = Transform3D(0.9999915, -0.004156675, 0, 0.004156675, 0.9999915, 0, 0, 0, 1, -3.9251282, 0.45209613, -7.6496143)
+
+[node name="iron-fence31" parent="AuxScene" unique_id=333896207 instance=ExtResource("5_t00lh")]
+transform = Transform3D(0.9999281, -0.011987787, 0, 0.011987787, 0.9999281, 0, 0, 0, 1, -2.91167, 0.4579613, -7.6496143)
+
+[node name="iron-fence32" parent="AuxScene" unique_id=1000295873 instance=ExtResource("5_t00lh")]
+transform = Transform3D(0.9999915, -0.004156675, 0, 0.004156675, 0.9999915, 0, 0, 0, 1, -0.92668724, 0.45209613, -7.6496143)
+
+[node name="iron-fence33" parent="AuxScene" unique_id=1106185577 instance=ExtResource("5_t00lh")]
+transform = Transform3D(0.9999915, -0.004156675, 0, 0.004156675, 0.9999915, 0, 0, 0, 1, 0.07858276, 0.45209613, -7.6496143)
+
+[node name="iron-fence34" parent="AuxScene" unique_id=1635519670 instance=ExtResource("5_t00lh")]
+transform = Transform3D(0.9997945, 0.020276887, 0, -0.020276887, 0.9997945, 0, 0, 0, 1, 1.0735817, 0.46447992, -7.6496143)
+
+[node name="iron-fence35" parent="AuxScene" unique_id=1541796403 instance=ExtResource("5_t00lh")]
+transform = Transform3D(0.9999226, 0.012446566, 0, -0.012446566, 0.9999226, 0, 0, 0, 1, 2.087246, 0.4605224, -7.6496143)
+
+[node name="iron-fence36" parent="AuxScene" unique_id=1536233954 instance=ExtResource("5_t00lh")]
+transform = Transform3D(0.9999915, -0.004156675, 0, 0.004156675, 0.9999915, 0, 0, 0, 1, 3.08097, 0.45209613, -7.6496143)
+
+[node name="iron-fence37" parent="AuxScene" unique_id=1690967628 instance=ExtResource("5_t00lh")]
+transform = Transform3D(0.9999281, -0.011987787, 0, 0.011987787, 0.9999281, 0, 0, 0, 1, 4.094428, 0.4579613, -7.6496143)
+
+[node name="iron-fence38" parent="AuxScene" unique_id=830614552 instance=ExtResource("5_t00lh")]
+transform = Transform3D(0.9999915, -0.004156675, 0, 0.004156675, 0.9999915, 0, 0, 0, 1, 5.0982323, 0.45209613, -7.6496143)
+
+[node name="iron-fence39" parent="AuxScene" unique_id=1625194528 instance=ExtResource("5_t00lh")]
+transform = Transform3D(0.9999915, -0.004156675, 0, 0.004156675, 0.9999915, 0, 0, 0, 1, 6.1035023, 0.45209613, -7.6496143)
+
+[node name="iron-fence40" parent="AuxScene" unique_id=1614762557 instance=ExtResource("5_t00lh")]
+transform = Transform3D(0.9999915, -0.004156675, 0, 0.004156675, 0.9999915, 0, 0, 0, 1, 7.0554867, 0.45209613, -7.6496143)
+
+[node name="iron-fence41" parent="AuxScene" unique_id=443547338 instance=ExtResource("5_t00lh")]
+transform = Transform3D(0.9999915, -0.004156675, 0, 0.004156675, 0.9999915, 0, 0, 0, 1, 8.020018, 0.052759305, -7.6496143)
+
+[node name="iron-fence62" parent="AuxScene" unique_id=683276386 instance=ExtResource("5_t00lh")]
+transform = Transform3D(0.9999915, -0.004156675, 0, 0.004156675, 0.9999915, 0, 0, 0, 1, 3.8226547, 0.052759305, 8.5612755)
+
+[node name="iron-fence63" parent="AuxScene" unique_id=667991758 instance=ExtResource("5_t00lh")]
+transform = Transform3D(0.9999915, -0.004156675, 0, 0.004156675, 0.9999915, 0, 0, 0, 1, 4.8797684, 0.052759305, 8.561275)
+
+[node name="iron-fence64" parent="AuxScene" unique_id=1881513178 instance=ExtResource("5_t00lh")]
+transform = Transform3D(0.9999915, -0.004156675, 0, 0.004156675, 0.9999915, 0, 0, 0, 1, 6.9198723, 0.052759305, 8.561275)
+
+[node name="iron-fence65" parent="AuxScene" unique_id=1657870490 instance=ExtResource("5_t00lh")]
+transform = Transform3D(0.9999915, -0.004156675, 0, 0.004156675, 0.9999915, 0, 0, 0, 1, 7.9433885, 0.05275941, 8.5612755)
+
+[node name="iron-fence66" parent="AuxScene" unique_id=2144416715 instance=ExtResource("5_t00lh")]
+transform = Transform3D(0.9999915, -0.004156675, 0, 0.004156675, 0.9999915, 0, 0, 0, 1, 8.971148, 0.05275941, 8.5612755)
+
+[node name="iron-fence67" parent="AuxScene" unique_id=727185451 instance=ExtResource("5_t00lh")]
+transform = Transform3D(0.9999915, -0.004156675, 0, 0.004156675, 0.9999915, 0, 0, 0, 1, 9.994663, 0.05275941, 8.5612755)
+
+[node name="iron-fence42" parent="AuxScene" unique_id=603866183 instance=ExtResource("5_t00lh")]
+transform = Transform3D(0.9999915, -0.004156675, 0, 0.004156675, 0.9999915, 0, 0, 0, 1, 9.029323, 0.052759305, -7.6496143)
+
+[node name="iron-fence43" parent="AuxScene" unique_id=1168117805 instance=ExtResource("5_t00lh")]
+transform = Transform3D(0.9999915, -0.004156675, 0, 0.004156675, 0.9999915, 0, 0, 0, 1, 10.035086, 0.052759305, -7.6496143)
+
+[node name="iron-fence44" parent="AuxScene" unique_id=1802787430 instance=ExtResource("5_t00lh")]
+transform = Transform3D(0.9999915, -0.004156675, 0, 0.004156675, 0.9999915, 0, 0, 0, 1, 11.044391, 0.052759305, -7.6496143)
+
+[node name="iron-fence45" parent="AuxScene" unique_id=1253492634 instance=ExtResource("5_t00lh")]
+transform = Transform3D(0.9999915, -0.004156675, 0, 0.004156675, 0.9999915, 0, 0, 0, 1, 12.045878, 0.052759305, -7.6496143)
+
+[node name="iron-fence46" parent="AuxScene" unique_id=894209917 instance=ExtResource("5_t00lh")]
+transform = Transform3D(0.9999915, -0.004156675, 0, 0.004156675, 0.9999915, 0, 0, 0, 1, 13.055183, 0.052759305, -7.6496143)
+
+[node name="iron-fence47" parent="AuxScene" unique_id=147869467 instance=ExtResource("5_t00lh")]
+transform = Transform3D(0.9999915, -0.004156675, 0, 0.004156675, 0.9999915, 0, 0, 0, 1, 14.060946, 0.052759305, -7.6496143)
+
+[node name="iron-fence48" parent="AuxScene" unique_id=200082763 instance=ExtResource("5_t00lh")]
+transform = Transform3D(0.9999915, -0.004156675, 0, 0.004156675, 0.9999915, 0, 0, 0, 1, 15.070251, 0.052759305, -7.6496143)
+
+[node name="iron-fence49" parent="AuxScene" unique_id=874950617 instance=ExtResource("5_t00lh")]
+transform = Transform3D(0.9999915, -0.004156675, 0, 0.004156675, 0.9999915, 0, 0, 0, 1, 16.046612, 0.052759305, -7.6496143)
+
+[node name="iron-fence50" parent="AuxScene" unique_id=1272569328 instance=ExtResource("5_t00lh")]
+transform = Transform3D(0.9999915, -0.004156675, 0, 0.004156675, 0.9999915, 0, 0, 0, 1, 17.055916, 0.052759305, -7.6496143)
 
 [node name="iron-fence6" parent="AuxScene" unique_id=1450163813 instance=ExtResource("5_t00lh")]
 transform = Transform3D(0.99996495, 0, -0.008371398, 0, 1, 0, 0.008371398, 0, 0.99996495, -9.7499895, 0.015801907, 8.460426)
@@ -110,6 +201,30 @@ transform = Transform3D(0.9998026, 0, 0.019869246, 0, 1, 0, -0.019869246, 0, 0.9
 
 [node name="iron-fence-damaged4" parent="AuxScene" unique_id=1645610179 instance=ExtResource("6_8ieq5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.7526836, 0, 8.473812)
+
+[node name="iron-fence-damaged14" parent="AuxScene" unique_id=1880050875 instance=ExtResource("6_8ieq5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.902176, 0.033751965, 8.530816)
+
+[node name="iron-fence68" parent="AuxScene" unique_id=572106116 instance=ExtResource("5_t00lh")]
+transform = Transform3D(0.9999915, -0.004156675, 0, 0.004156675, 0.9999915, 0, 0, 0, 1, 12.043554, 0.052759305, 8.5612755)
+
+[node name="iron-fence69" parent="AuxScene" unique_id=1234274299 instance=ExtResource("5_t00lh")]
+transform = Transform3D(0.9999915, -0.004156675, 0, 0.004156675, 0.9999915, 0, 0, 0, 1, 13.06707, 0.05275941, 8.5612755)
+
+[node name="iron-fence-damaged15" parent="AuxScene" unique_id=1554542162 instance=ExtResource("6_8ieq5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.025858, 0.033751965, 8.530817)
+
+[node name="iron-fence70" parent="AuxScene" unique_id=289678238 instance=ExtResource("5_t00lh")]
+transform = Transform3D(0.9999915, -0.004156675, 0, 0.004156675, 0.9999915, 0, 0, 0, 1, 15.07366, 0.052759305, 8.5612755)
+
+[node name="iron-fence71" parent="AuxScene" unique_id=2043258266 instance=ExtResource("5_t00lh")]
+transform = Transform3D(0.9999915, -0.004156675, 0, 0.004156675, 0.9999915, 0, 0, 0, 1, 16.097176, 0.05275941, 8.5612755)
+
+[node name="iron-fence72" parent="AuxScene" unique_id=543706112 instance=ExtResource("5_t00lh")]
+transform = Transform3D(0.9999915, -0.004156675, 0, 0.004156675, 0.9999915, 0, 0, 0, 1, 16.953682, 0.05275941, 8.5612755)
+
+[node name="iron-fence-damaged16" parent="AuxScene" unique_id=1209291842 instance=ExtResource("6_8ieq5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.0559635, 0.033751965, 8.530817)
 
 [node name="iron-fence11" parent="AuxScene" unique_id=327994981 instance=ExtResource("5_t00lh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.7596283, 0.0037726164, 8.462169)
@@ -153,8 +268,50 @@ transform = Transform3D(0.05216562, 0, 0.99863845, 0, 1, 0, -0.99863845, 0, 0.05
 [node name="iron-fence20" parent="AuxScene" unique_id=1640688217 instance=ExtResource("5_t00lh")]
 transform = Transform3D(-0.013035949, 0, 0.99991506, 0, 1, 0, -0.99991506, 0, -0.013035949, -16.793102, 0, -5.705559)
 
+[node name="iron-fence-damaged11" parent="AuxScene" unique_id=1464495635 instance=ExtResource("6_8ieq5")]
+transform = Transform3D(0.04127577, 0, 0.9991478, 0, 1, 0, -0.9991478, 0, 0.04127577, 18.870935, 9.536743e-07, -3.691574)
+
+[node name="iron-fence51" parent="AuxScene" unique_id=22864660 instance=ExtResource("5_t00lh")]
+transform = Transform3D(-0.03706719, 0, 0.99931276, 0, 1, 0, -0.99931276, 0, -0.03706719, 18.860086, 0, -4.7243977)
+
+[node name="iron-fence52" parent="AuxScene" unique_id=288166142 instance=ExtResource("5_t00lh")]
+transform = Transform3D(0.05216562, 0, 0.99863845, 0, 1, 0, -0.99863845, 0, 0.05216562, 18.860086, 0, -5.6944523)
+
+[node name="iron-fence53" parent="AuxScene" unique_id=793629526 instance=ExtResource("5_t00lh")]
+transform = Transform3D(-0.013035949, 0, 0.99991506, 0, 1, 0, -0.99991506, 0, -0.013035949, 18.882494, 0, -6.733019)
+
+[node name="iron-fence-damaged12" parent="AuxScene" unique_id=1181121860 instance=ExtResource("6_8ieq5")]
+transform = Transform3D(0.04127577, 0, 0.9991478, 0, 1, 0, -0.9991478, 0, 0.04127577, 18.870935, 9.536743e-07, 0.2905512)
+
+[node name="iron-fence54" parent="AuxScene" unique_id=1906730820 instance=ExtResource("5_t00lh")]
+transform = Transform3D(-0.03706719, 0, 0.99931276, 0, 1, 0, -0.99931276, 0, -0.03706719, 18.860086, 0, -0.7422724)
+
+[node name="iron-fence55" parent="AuxScene" unique_id=1464609414 instance=ExtResource("5_t00lh")]
+transform = Transform3D(0.05216562, 0, 0.99863845, 0, 1, 0, -0.99863845, 0, 0.05216562, 18.860086, 0, -1.712327)
+
+[node name="iron-fence56" parent="AuxScene" unique_id=882216387 instance=ExtResource("5_t00lh")]
+transform = Transform3D(-0.013035949, 0, 0.99991506, 0, 1, 0, -0.99991506, 0, -0.013035949, 18.882494, 0, -2.7508936)
+
+[node name="iron-fence57" parent="AuxScene" unique_id=1652289439 instance=ExtResource("5_t00lh")]
+transform = Transform3D(-0.013035949, 0, 0.99991506, 0, 1, 0, -0.99991506, 0, -0.013035949, 18.882494, 0, 1.3139813)
+
+[node name="iron-fence58" parent="AuxScene" unique_id=87000588 instance=ExtResource("5_t00lh")]
+transform = Transform3D(-0.013035949, 0, 0.99991506, 0, 1, 0, -0.99991506, 0, -0.013035949, 18.882494, 0, 2.3143616)
+
+[node name="iron-fence59" parent="AuxScene" unique_id=1253426782 instance=ExtResource("5_t00lh")]
+transform = Transform3D(-0.013035949, 0, 0.99991506, 0, 1, 0, -0.99991506, 0, -0.013035949, 18.882494, 0, 3.323774)
+
+[node name="iron-fence-damaged13" parent="AuxScene" unique_id=157986243 instance=ExtResource("6_8ieq5")]
+transform = Transform3D(0.04127577, 0, 0.9991478, 0, 1, 0, -0.9991478, 0, 0.04127577, 18.870935, 9.536743e-07, 4.358117)
+
+[node name="iron-fence60" parent="AuxScene" unique_id=714715445 instance=ExtResource("5_t00lh")]
+transform = Transform3D(-0.013035949, 0, 0.99991506, 0, 1, 0, -0.99991506, 0, -0.013035949, 18.882494, 0, 5.381547)
+
+[node name="iron-fence61" parent="AuxScene" unique_id=446140625 instance=ExtResource("5_t00lh")]
+transform = Transform3D(-0.013035949, 0, 0.99991506, 0, 1, 0, -0.99991506, 0, -0.013035949, 18.882494, 0, 6.3819275)
+
 [node name="iron-fence-border-column" parent="AuxScene" unique_id=985004364 instance=ExtResource("5_172wu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7031591, 0, 8.428334)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7031591, 0.038865685, 8.428334)
 
 [node name="iron-fence-border-column3" parent="AuxScene" unique_id=1310899410 instance=ExtResource("5_172wu")]
 transform = Transform3D(-0.010709494, 0, 0.9999427, 0, 1, 0, -0.9999427, 0, -0.010709494, -16.872532, 4.7683716e-07, 3.4413347)
@@ -234,3 +391,6 @@ shape = SubResource("BoxShape3D_2nk42")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=861252100]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.832294, 1.6786423, 9.442641)
 shape = SubResource("BoxShape3D_i2owx")
+
+[node name="lightpost-single" parent="." unique_id=1878463280 instance=ExtResource("9_n5ojv")]
+transform = Transform3D(-0.05954834, 0, 0.99822545, 0, 1, 0, -0.99822545, 0, -0.05954834, 18.441723, 0.01725316, 6.986773)
