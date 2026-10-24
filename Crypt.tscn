@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://c3tsqqhkbpe3x"]
+
+[ext_resource type="PackedScene" uid="uid://cg702qt5iyqal" path="res://Assets/crypt-large.fbx" id="1_xw5cc"]
+[ext_resource type="PackedScene" uid="uid://dhaam33rcbb7b" path="res://Assets/crypt-large-roof.fbx" id="2_extps"]
+[ext_resource type="PackedScene" uid="uid://ctesasx5pcse4" path="res://Assets/crypt-door.fbx" id="3_cfm5k"]
+[ext_resource type="PackedScene" uid="uid://c0vxumcmucoib" path="res://Assets/pumpkin-carved.fbx" id="4_extps"]
+
+[node name="Node3D" type="Node3D" unique_id=1633184306]
+
+[node name="crypt-large" parent="." unique_id=770368833 instance=ExtResource("1_xw5cc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.08030748, 0, 0.16027236)
+
+[node name="crypt-large-roof" parent="." unique_id=1577565318 instance=ExtResource("2_extps")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="crypt-door" parent="." unique_id=224218299 instance=ExtResource("3_cfm5k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.068148375, 0.06330562, 1)
+
+[node name="crypt-door2" parent="." unique_id=232224783 instance=ExtResource("3_cfm5k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.33945024, 0.06330562, 1)
+
+[node name="pumpkin-carved" parent="." unique_id=484113163 instance=ExtResource("4_extps")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.48491007, 0, 1.4059743)
+
+[node name="pumpkin-carved2" parent="." unique_id=987221490 instance=ExtResource("4_extps")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.37127048, 0, 1.4059743)

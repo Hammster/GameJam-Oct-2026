@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://b41jyplfk65uj"]
+
+[ext_resource type="PackedScene" uid="uid://cwi3lvpag1843" path="res://Assets/grave.fbx" id="1_u6hqr"]
+[ext_resource type="PackedScene" uid="uid://c8s8g6ou0j87t" path="res://Assets/gravestone-decorative.fbx" id="2_6jhf3"]
+
+[node name="Node3D" type="Node3D" unique_id=1072423849]
+
+[node name="grave" parent="." unique_id=1812864091 instance=ExtResource("1_u6hqr")]
+
+[node name="gravestone-decorative" parent="." unique_id=420381316 instance=ExtResource("2_6jhf3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.036914587, 0, -0.62662196)
