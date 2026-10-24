@@ -17,6 +17,3 @@ script = ExtResource("2_script")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="character-digger/CharacterBody3D" unique_id=896515407]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4335327, 0)
 shape = SubResource("CapsuleShape3D_6d82q")
-
-[node name="Camera3D" type="Camera3D" parent="." unique_id=1002788859]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.38131243, 1.0287831)

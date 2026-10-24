@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://7xxis4o4ugr1"]
+
+[ext_resource type="PackedScene" uid="uid://cykkfk7cjigk4" path="res://Graveyard.tscn" id="1_wbfu4"]
+[ext_resource type="PackedScene" uid="uid://xnc6rjabfgdv" path="res://grave_digger.tscn" id="2_xkndl"]
+
+[node name="Node3D" type="Node3D" unique_id=203443286]
+
+[node name="Graveyard" parent="." unique_id=1040692397 instance=ExtResource("1_wbfu4")]
+
+[node name="GraveDigger" parent="." unique_id=1669675991 instance=ExtResource("2_xkndl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.079928994, 0, -0.051651955)
+
+[node name="Camera3D2" type="Camera3D" parent="." unique_id=787899253]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -0.38107145, 14.872191, 0.06986165)
+fov = 67.5
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=250175458]
+transform = Transform3D(1, 0, 0, 0, 0.33007008, 0.94395643, 0, -0.94395643, 0.33007008, 0, 6.002473, 3.8943646)
