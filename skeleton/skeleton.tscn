@@ -1,20 +1,22 @@
-[gd_scene format=3 uid="uid://lvf50mttls0k"]
+[gd_scene format=3 uid="uid://cw5sf70pmo17c"]
 
 [ext_resource type="PackedScene" uid="uid://dw6l5lih83msg" path="res://skeleton/character-skeleton.fbx" id="1_f33b7"]
 [ext_resource type="Script" uid="uid://c5cwepgs54hr1" path="res://skeleton/skeleton_ai.gd" id="2_eh87f"]
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_8dwrr"]
-radius = 0.37
-height = 0.74
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_3j17k"]
+radius = 0.3
+height = 0.8
 
-[node name="character-skeleton" unique_id=1530747088 instance=ExtResource("1_f33b7")]
+[node name="Skeleton" type="CharacterBody3D" unique_id=1416963321]
+collision_layer = 4
 script = ExtResource("2_eh87f")
 
-[node name="arm_left" parent="character_skeleton/root/torso" parent_id_path=PackedInt32Array(1616082712) index="0" unique_id=1669514151]
-transform = Transform3D(0.7071067, 0.7071068, 0, -0.7071068, 0.7071067, 0, 0, 0, 1, 0.15, 0.225, 0.0025)
+[node name="character-skeleton" parent="." unique_id=286325279 instance=ExtResource("1_f33b7")]
 
-[node name="arm_right" parent="character_skeleton/root/torso" parent_id_path=PackedInt32Array(1616082712) index="1" unique_id=428366294]
-transform = Transform3D(0.7071067, -0.7071067, 0, 0.7071067, 0.7071067, 0, 0, 0, 1, -0.15, 0.225, 0.0025)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=848738643]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.37865093, 0)
+shape = SubResource("CapsuleShape3D_3j17k")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="2" unique_id=1354325616]
-shape = SubResource("CapsuleShape3D_8dwrr")
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=258568707]
+avoidance_enabled = true
+debug_enabled = true

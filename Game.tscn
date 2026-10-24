@@ -2,15 +2,17 @@
 
 [ext_resource type="PackedScene" uid="uid://cykkfk7cjigk4" path="res://Graveyard.tscn" id="1_wbfu4"]
 [ext_resource type="PackedScene" uid="uid://xnc6rjabfgdv" path="res://grave_digger.tscn" id="2_xkndl"]
-[ext_resource type="PackedScene" uid="uid://lvf50mttls0k" path="res://skeleton/skeleton.tscn" id="3_u44n3"]
+[ext_resource type="PackedScene" uid="uid://cw5sf70pmo17c" path="res://skeleton/skeleton.tscn" id="3_u44n3"]
 [ext_resource type="PackedScene" uid="uid://b8udc3oxnjtvj" path="res://skeleton/grave.tscn" id="4_sb48q"]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_sb48q"]
+vertices = PackedVector3Array(-1.6445866, 0.4994824, -1.0048361, -0.89458656, 0.4994824, -1.0048361, -0.89458656, 0.4994824, -9.504836, -2.1445866, 0.4994824, -0.0048360825, -14.394587, 0.4994824, -9.504836, -14.394587, 0.4994824, -0.0048360825, -0.39458656, 0.4994824, -1.0048361, 0.10541344, 0.4994824, -0.0048360825, 13.605413, 0.4994824, -0.0048360825, 13.605413, 0.4994824, -9.504836, -0.89458656, 0.4994824, 9.495164, -0.89458656, 0.4994824, 0.9951639, -1.6445866, 0.4994824, 0.9951639, -14.394587, 0.4994824, 9.495164, -0.39458656, 0.4994824, 0.9951639, 13.605413, 0.4994824, 9.495164)
+polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(0, 3, 2), PackedInt32Array(2, 3, 5), PackedInt32Array(2, 5, 4), PackedInt32Array(6, 1, 2), PackedInt32Array(6, 2, 7), PackedInt32Array(7, 2, 8), PackedInt32Array(8, 2, 9), PackedInt32Array(12, 11, 10), PackedInt32Array(12, 10, 3), PackedInt32Array(3, 10, 5), PackedInt32Array(5, 10, 13), PackedInt32Array(10, 11, 14), PackedInt32Array(14, 7, 10), PackedInt32Array(10, 7, 8), PackedInt32Array(10, 8, 15)]
 
 [node name="Node3D" type="Node3D" unique_id=203443286]
 
-[node name="character-skeleton" parent="." unique_id=1530747088 node_paths=PackedStringArray("grave") instance=ExtResource("3_u44n3")]
+[node name="Skeleton" parent="." unique_id=1416963321 node_paths=PackedStringArray("grave") instance=ExtResource("3_u44n3")]
 grave = NodePath("../grave")
-
-[node name="Graveyard" parent="." unique_id=1040692397 instance=ExtResource("1_wbfu4")]
 
 [node name="GraveDigger" parent="." unique_id=1669675991 instance=ExtResource("2_xkndl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.079928994, 0, -0.051651955)
@@ -24,3 +26,8 @@ transform = Transform3D(1, 0, 0, 0, 0.33007008, 0.94395643, 0, -0.94395643, 0.33
 
 [node name="grave" parent="." unique_id=212240962 instance=ExtResource("4_sb48q")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -2)
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=1929157769]
+navigation_mesh = SubResource("NavigationMesh_sb48q")
+
+[node name="Graveyard" parent="NavigationRegion3D" unique_id=1040692397 instance=ExtResource("1_wbfu4")]

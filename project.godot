@@ -43,6 +43,12 @@ move_forward={
 ]
 }
 
+[layer_names]
+
+3d_physics/layer_1="Obstacles"
+3d_physics/layer_2="PlayerAttack"
+3d_physics/layer_3="Enemy"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
