@@ -22,7 +22,12 @@ sky_material = SubResource("PanoramaSkyMaterial_2vekm")
 
 [sub_resource type="Environment" id="Environment_ex8sm"]
 background_mode = 2
+background_energy_multiplier = 1.42
 sky = SubResource("Sky_joorw")
+sky_custom_fov = 96.7
+sky_rotation = Vector3(2.2148228, -1.1815879, 0)
+ambient_light_sky_contribution = 0.0
+ambient_light_energy = 2.85
 
 [node name="Node3D" type="Node3D" unique_id=203443286]
 
